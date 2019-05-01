@@ -152,6 +152,16 @@ body {
     width: 900px;
   }
 }
+.flex-horizontal-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-horizontal {
+  display: flex;
+  justify-content: space-between;
+}
 header {
   position: sticky;
   top: 0px;
@@ -160,6 +170,7 @@ header {
   text-align: center;
   border-bottom: 1px black solid;
   margin-bottom: 0.5rem;
+  font-family: "Times New Roman", Times, serif;
 }
 header nav {
   color: black;
@@ -198,8 +209,9 @@ section ul {
 }
 section ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 section dt {
   font-weight: bold;
