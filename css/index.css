@@ -152,6 +152,18 @@ body {
     width: 900px;
   }
 }
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v6/neIQzD-0qpwxpaWvjeD0X88SAOeauXQ-pQ.ttf) format('truetype');
+}
 .flex-horizontal-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -170,21 +182,33 @@ header {
   text-align: center;
   border-bottom: 1px black solid;
   margin-bottom: 0.5rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Source Serif Pro', serif;
+  margin-top: 0.5rem;
 }
-header nav {
+header section {
   color: black;
   padding: 0.25rem;
   margin: auto;
 }
-header nav h1 {
+header section h1 {
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0.5rem;
 }
-header nav address,
-header nav section.data {
+header section address,
+header section section.data {
   margin: 0.5rem;
+}
+header nav {
+  font-size: 0.8em;
+  font-weight: 700;
+  height: 3em;
+  position: absolute;
+  right: 0.7em;
+  top: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 3em;
 }
 h2 {
   text-align: center;
@@ -241,4 +265,9 @@ section dd ul {
 .card p {
   margin-left: 2.5rem;
   margin-top: 0.5rem;
+}
+.toHome {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
 }
