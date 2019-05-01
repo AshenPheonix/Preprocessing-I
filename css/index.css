@@ -142,12 +142,12 @@ body {
     width: 100%;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   body {
     width: 800px;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   body {
     width: 900px;
   }
@@ -164,11 +164,32 @@ body {
   font-weight: 400;
   src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v6/neIQzD-0qpwxpaWvjeD0X88SAOeauXQ-pQ.ttf) format('truetype');
 }
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .flex-horizontal-wrap {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  .flex-horizontal-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .flex-horizontal-wrap li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  .flex-horizontal-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .flex-horizontal {
   display: flex;
@@ -184,10 +205,39 @@ header {
   margin-bottom: 0.5rem;
   font-family: 'Source Serif Pro', serif;
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .toHome {
+  position: relative;
+  top: 0;
+  border: 1px black solid;
+  text-decoration: none;
+  color: black;
+  border-radius: 1em;
+  background-color: lightgray;
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+header .toHome:hover {
+  box-shadow: inset grey 4px 5px 4px;
+  border: 1px black inset;
+}
+@media (min-width: 800px) {
+  header .toHome {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+  }
 }
 header section {
   color: black;
-  padding: 0.25rem;
+  padding: 0.5rem;
   margin: auto;
 }
 header section h1 {
@@ -226,7 +276,7 @@ section h3 {
 }
 section p,
 section dl {
-  margin-left: 1.25rem;
+  margin-left: 1.5rem;
 }
 section ul {
   margin-left: 2rem;
@@ -234,8 +284,25 @@ section ul {
 section ul {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  section ul li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  section ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 section dt {
   font-weight: bold;
@@ -251,7 +318,7 @@ section dd ul {
 }
 .dot {
   list-style-type: disc;
-  margin: 0.25rem;
+  margin: 0.5rem;
 }
 .card h4 {
   font-weight: bold;
@@ -263,11 +330,6 @@ section dd ul {
   justify-content: space-between;
 }
 .card p {
-  margin-left: 2.5rem;
+  margin-left: 2 0.5rem;
   margin-top: 0.5rem;
-}
-.toHome {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
 }

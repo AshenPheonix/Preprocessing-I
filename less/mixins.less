@@ -1,8 +1,23 @@
-.flex-horizontal-wrap{
+.flex-wrap{
     display:flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+}
+.flex-horizontal-wrap{
+    .flex-wrap();
+    flex-direction: column;
+
+    @media(min-width:500px){
+        .flex-wrap();
+        justify-content: flex-start;
+        li.dot{
+            list-style-position: inside;
+        }
+    }
+    @media(min-width: 800px){
+        .flex-wrap();
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 .flex-horizontal{
     display:flex;
