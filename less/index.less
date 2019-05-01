@@ -57,3 +57,99 @@ html, body {
     height: 100%;
 }
 
+body{
+	@media(max-width: 500px){
+		width: 100%;
+	}
+	@media(min-width: 500px){
+		width:800px;
+	}
+	@media(min-width:800px){
+		width:900px;
+	}
+	margin:auto;
+}
+
+header{
+	position: sticky;
+	top:0px;
+	background-color: white;
+	width:100%;
+	text-align: center;
+	border-bottom:1px black solid;
+	margin-bottom:.5rem;
+	nav{
+		color:black;
+		padding:.25rem;
+		margin:auto;
+		h1{
+			font-weight: bold;
+			font-size: 1.5rem;
+			margin: .50rem;
+		}
+		address,section.data{
+			margin:.5rem;
+		}
+	}
+}
+
+h2{
+	text-align: center;
+	font-size:1.25rem;
+	font-weight: bold;
+}
+
+section{
+	width:100%;
+	padding:1rem;
+	h3{
+		font-weight: bold;
+		margin:.5rem;
+		font-size:1.25rem;
+	}
+	p,dl{
+		margin-left:1.25rem;
+	}
+	ul{
+		margin-left:2rem;
+	}
+	ul{
+		display:flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	dt{
+		font-weight: bold;
+		margin-top:1rem;
+		margin-bottom:.5rem;
+	}
+	dd{
+		margin-left:1rem;
+		margin-bottom:1rem;
+		ul{
+			flex-direction:column;
+		}
+	}
+}
+
+.dot{
+	list-style-type: disc;
+	margin:.25rem;
+}
+
+.card{
+	
+	h4{
+		font-weight: bold;
+		display: block;
+		font-size:1.15rem;
+	}
+	ul{
+		display:flex;
+		justify-content: space-between;
+	}
+	p{
+		margin-left:2.5rem;
+		margin-top:.5rem;
+	}
+}
