@@ -53,10 +53,6 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body{
 	@media(max-width: 500px){
 		width: 100%;
@@ -72,108 +68,13 @@ body{
 
 @import 'variables';
 @import 'mixins';
-
-header{
-	position: sticky;
-	top:0px;
-	background-color: @background-color;
-	width:100%;
-	text-align: center;
-	border-bottom:1px black solid;
-	margin-bottom:@pos-margin;
-	font-family: @font-stack;
-	margin-top:@pos-margin;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	.toHome{
-		position: relative;;
-		top:0;
-		border:1px black solid;
-		text-decoration: none;
-		color:@font-color;
-		border-radius: 1em;
-		background-color: lightgray;
-		padding:1rem;
-		width:50%;
-		margin:auto;
-		margin-top:@pos-margin;
-		margin-bottom:@pos-margin;
-		&:hover{
-			box-shadow: inset grey 4px 5px 4px;
-			border:1px black inset;
-		}
-		@media(min-width: 500px){
-		}
-		@media(min-width: 800px){
-			position: absolute;
-			top:1rem;
-			right:1rem;
-			width: auto;
-		}
-	}
-	section{
-		color:black;
-		padding:@pos-margin;
-		margin:auto;
-		h1{
-			font-weight: bold;
-			font-size: @font-large;
-			margin: .50rem;
-		}
-		address,section.data{
-			margin:@pos-margin;
-		}
-	}
-
-	nav{
-		font-size:.8em;
-		font-weight: 700;
-		height:3em;
-		position: absolute;
-		right:.7em;
-		top:.7em;
-		text-transform: uppercase;
-		letter-spacing: .1em;
-		line-height: 3em;
-	}
-}
+@import 'navbar';
+@import 'body';
 
 h2{
 	text-align: center;
 	font-size: @font-med;
 	font-weight: bold;
-}
-
-section{
-	width:100%;
-	padding:@std-margin;
-	h3{
-		font-weight: bold;
-		margin:@pos-margin;
-		font-size: @font-med;
-	}
-	p,dl{
-		margin-left:1.5rem;
-	}
-	ul{
-		margin-left:@deep-margin;
-	}
-	ul{
-		.flex-horizontal-wrap();
-	}
-	dt{
-		font-weight: bold;
-		margin-top:@std-margin;
-		margin-bottom:@pos-margin;
-	}
-	dd{
-		margin-left:@std-margin;
-		margin-bottom:@std-margin;
-		ul{
-			flex-direction:column;
-		}
-	}
 }
 
 .dot{
@@ -195,4 +96,9 @@ section{
 		margin-left:2@pos-margin;
 		margin-top:@pos-margin;
 	}
+}
+.hideAnchor{
+	position:absolute;
+	left:0px;
+	top:-200px;
 }

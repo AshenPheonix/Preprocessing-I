@@ -130,10 +130,6 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-}
 body {
   margin: auto;
 }
@@ -195,6 +191,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.fakeButton {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
 header {
   position: sticky;
   top: 0px;
@@ -250,20 +253,71 @@ header section section.data {
   margin: 0.5rem;
 }
 header nav {
-  font-size: 0.8em;
-  font-weight: 700;
-  height: 3em;
-  position: absolute;
-  right: 0.7em;
-  top: 0.7em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  line-height: 3em;
+  order: 1;
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: none;
 }
-h2 {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: bold;
+@media (min-width: 500px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  header nav li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+header nav a {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+@media (min-width: 500px) {
+  header nav {
+    flex-direction: row;
+    display: block;
+  }
+}
+details summary {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  background-color: lightgray;
+  width: 25%;
+}
+details section {
+  margin: 0.5rem auto;
+}
+details section a {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #872618;
+  color: white;
+}
+@media (min-width: 500px) {
+  details {
+    display: none;
+  }
 }
 section {
   width: 100%;
@@ -316,6 +370,11 @@ section dd {
 section dd ul {
   flex-direction: column;
 }
+h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 .dot {
   list-style-type: disc;
   margin: 0.5rem;
@@ -332,4 +391,9 @@ section dd ul {
 .card p {
   margin-left: 2 0.5rem;
   margin-top: 0.5rem;
+}
+.hideAnchor {
+  position: absolute;
+  left: 0px;
+  top: -200px;
 }
