@@ -1,1 +1,399 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+}
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    width: 800px;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    width: 900px;
+  }
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v6/neIQzD-0qpwxpaWvjeD0X88SAOeauXQ-pQ.ttf) format('truetype');
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-horizontal-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  .flex-horizontal-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .flex-horizontal-wrap li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  .flex-horizontal-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.flex-horizontal {
+  display: flex;
+  justify-content: space-between;
+}
+.fakeButton {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+header {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px black solid;
+  margin-bottom: 0.5rem;
+  font-family: 'Source Serif Pro', serif;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .toHome {
+  position: relative;
+  top: 0;
+  border: 1px black solid;
+  text-decoration: none;
+  color: black;
+  border-radius: 1em;
+  background-color: lightgray;
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+header .toHome:hover {
+  box-shadow: inset grey 4px 5px 4px;
+  border: 1px black inset;
+}
+@media (min-width: 800px) {
+  header .toHome {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+}
+header section {
+  color: black;
+  padding: 0.5rem;
+  margin: auto;
+}
+header section h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+header section address,
+header section section.data {
+  margin: 0.5rem;
+}
+header nav {
+  order: 1;
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: none;
+}
+@media (min-width: 500px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  header nav li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+header nav a {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+@media (min-width: 500px) {
+  header nav {
+    flex-direction: row;
+    display: block;
+  }
+}
+details summary {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  background-color: lightgray;
+  width: 25%;
+}
+details section {
+  margin: 0.5rem auto;
+}
+details section a {
+  color: black;
+  border: 1px black solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #872618;
+  color: white;
+}
+@media (min-width: 500px) {
+  details {
+    display: none;
+  }
+}
+section {
+  width: 100%;
+  padding: 1rem;
+}
+section h3 {
+  font-weight: bold;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+section p,
+section dl {
+  margin-left: 1.5rem;
+}
+section ul {
+  margin-left: 2rem;
+}
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  section ul li.dot {
+    list-style-position: inside;
+  }
+}
+@media (min-width: 800px) {
+  section ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+section dt {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+section dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+section dd ul {
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.dot {
+  list-style-type: disc;
+  margin: 0.5rem;
+}
+.card h4 {
+  font-weight: bold;
+  display: block;
+  font-size: 1.15rem;
+}
+.card ul {
+  display: flex;
+  justify-content: space-between;
+}
+.card p {
+  margin-left: 2 0.5rem;
+  margin-top: 0.5rem;
+}
+.hideAnchor {
+  position: absolute;
+  left: 0px;
+  top: -200px;
+}
